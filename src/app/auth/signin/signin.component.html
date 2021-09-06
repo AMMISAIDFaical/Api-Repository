@@ -1,0 +1,22 @@
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+  <h2>Sgin in</h2>
+  <div class="form-group">
+    <div>
+      <mat-error *ngIf="invalideLogin">invalide email or password please check your email or password</mat-error>
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" type ="email" name="email" ngModel ='email' required>
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" type="password" name="password" ngModel ='password' required>
+    </mat-form-field>
+  </div>
+
+  <button mat-button="mat-raised-button" type="submit">Login</button>
+  <button (click)="rediToSingUp()" class="createAcocount" mat-button="mat-raised-button" type="button">Create Account</button>
+</form>

@@ -1,0 +1,90 @@
+<div class="contributer">
+
+  <form class="example-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Name</mat-label>
+      <input type="text" id="prod_name" matInput placeholder="insert your product'name" name="prod_name"
+        [(ngModel)]='prod_name' maxlength="15" required>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Link</mat-label>
+      <input type="text" id="link_doc" matInput placeholder="link to the documentation" name="link_doc"
+        [(ngModel)]='link_doc' required>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Your Product'Current Status</mat-label>
+      <input type="text" id="prod_status" matInput placeholder="ex. Status : active/paused/stopped" name="prod_status"
+        [(ngModel)]='prod_status' required>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Link to the product</mat-label>
+      <input type="text" id="link_api" matInput placeholder="insert link to the api helps us check your api status"
+        name="link_api" [(ngModel)]='link_api ' required>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Contributer Name</mat-label>
+      <input type="text" id="cont_name" matInput placeholder="insert your name" name="cont_name" [(ngModel)]='cont_name'
+        maxlength="15" required>
+
+    </mat-form-field>
+
+    <button mat-stroked-button type="submit" [disabled]="f.invalid"> Add Product </button>
+
+  </form>
+
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col"> product informations </th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <th style="padding: 40px;" scope="row">{{prod_name}} </th>
+      </tr>
+
+      <tr>
+        <th style="padding: 40px;" scope="row">{{link_doc}} </th>
+      </tr>
+
+      <tr>
+        <th *ngIf="prod_status == 'active'" style="padding: 40px; background-color: rgb(22, 233, 163);" scope="row">
+          {{prod_status}} </th>
+        <th *ngIf="prod_status == 'paused'" style="padding: 40px; background-color: rgb(243, 221, 120);" scope="row">
+          {{prod_status}} </th>
+        <th *ngIf="prod_status == 'stopped'" style="padding: 40px; background-color: rgb(236, 51, 51);" scope="row">
+          {{prod_status}} </th>
+      </tr>
+
+      <tr>
+        <th style="padding: 40px;" scope="row"> {{link_api}}</th>
+      </tr>
+
+      <tr>
+        <th style="padding: 40px;" scope="row"> {{cont_name}}</th>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+</div>

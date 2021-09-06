@@ -1,0 +1,34 @@
+<p >Welcome to our ApiStore where you can adventage of api's for your projects</p>
+
+<body style="width: 100%" class="bodyclass">
+
+  <div class="responsive-table">
+    <section class="day-section-sunday" *ngFor="let p of filtredContNames">
+      <h2 class="day-content head">{{p}}</h2>
+      <p *ngFor="let pc of prodAndContList" [ngSwitch]="pc.Status" class="day-content recipe">
+
+        <button *ngSwitchCase="'active'" style="background-color: rgb(131, 214, 7);"  mat-stroked-button>
+          <span *ngIf="p == pc.Name">{{pc.ProdName}}</span>
+        </button>
+
+        <button *ngSwitchCase="'paused'" style="background-color: rgb(255, 189, 47);" mat-stroked-button>
+          <span *ngIf="p == pc.Name"> {{pc.ProdName}} </span>
+        </button>
+
+        <button *ngSwitchCase="'stopped'" style="background-color: rgb(219, 39, 39);" mat-stroked-button>
+          <span *ngIf="p == pc.Name"> {{pc.ProdName}} </span>
+        </button>
+
+      </p>
+    </section>
+  </div>
+</body>
+
+<div style="height: 200px;width: 200px;" class="example-ripple-container mat-elevation-z4"
+     matRipple
+     [matRippleCentered]="disabled"
+     [matRippleDisabled]="disabled"
+     [matRippleUnbounded]="disabled"
+     >
+
+</div>

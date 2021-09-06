@@ -1,0 +1,40 @@
+p
+{
+  color: darkslategrey;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+///////////////////////////table//////////////////////////////
+.bodyclass {
+  padding: 1rem;
+}
+
+.responsive-table {
+  display: block;
+}
+
+[class^="day-section"] {
+  margin-bottom: 1rem;
+}
+
+
+.head {
+  background: #eaeaea;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 800px) {
+  .responsive-table {
+      display: flex;
+  }
+  [class^="day-section"] {
+      flex-grow: 1;
+  }
+}
+p{
+  width: 100% ;
+  margin-top: 50px;
+}
+///////////////////////////table/////////////////////////////////

@@ -1,0 +1,50 @@
+<div  class="contributer">
+
+  <form class="example-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Contributer Name</mat-label>
+      <input type="text" id="cont_name" matInput placeholder="insert contributer'name" name="cont_name"
+        [(ngModel)]='cont_name' maxlength="15" required>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>email</mat-label>
+      <input type="text" id="email" matInput placeholder="insert email" name="email" [(ngModel)]='email ' required>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Number of Products</mat-label>
+      <input type="text" id="product" matInput placeholder="number of Products" name="num_product"
+        [(ngModel)]='num_product' required>
+
+    </mat-form-field>
+
+    <button mat-stroked-button type="submit" [disabled]="f.invalid"> Add Contributer </button>
+
+    <mat-card class="example-card">
+
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          upload Contibuter photo here by clcking upload button in case you want to remove it click on remove button
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>UPLOAD</button>
+        <button mat-button>REMOVE</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </form>
+
+
+
+</div>
